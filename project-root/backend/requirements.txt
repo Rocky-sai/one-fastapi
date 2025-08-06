@@ -1,0 +1,71 @@
+# AI Virtual Coding Platform Backend Requirements
+
+# Core FastAPI dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+
+# WebSocket support
+websockets==12.0
+
+# CORS support
+starlette==0.27.0
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+
+# Code execution and security
+subprocess32==3.5.4; sys_platform == "linux"
+
+# Logging and monitoring
+loguru==0.7.2
+
+# Optional: For advanced AI features (uncomment if needed)
+# openai==1.3.7
+# anthropic==0.7.8
+# transformers==4.36.2
+# torch==2.1.1
+
+# Optional: For additional language support (uncomment if needed)
+# docker==6.1.3  # For containerized code execution
+# kubernetes==28.1.0  # For Kubernetes deployment
+
+# Development tools
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+pre-commit==3.6.0
+
+# Environment management
+python-dotenv==1.0.0
+
+# Security
+cryptography==41.0.8
+
+# Performance monitoring
+psutil==5.9.6
+
+# Database (if you want to add persistence)
+# sqlalchemy==2.0.23
+# alembic==1.13.1
+# psycopg2-binary==2.9.9  # For PostgreSQL
+# asyncpg==0.29.0  # Async PostgreSQL driver
+
+# Redis (for caching and sessions)
+# redis==5.0.1
+# aioredis==2.0.1
+
+# File handling
+aiofiles==23.2.0
+
+# JSON handling
+orjson==3.9.10
+
+# Rate limiting
+slowapi==0.1.9
+
+# Health checks
+py-healthcheck==1.10.1

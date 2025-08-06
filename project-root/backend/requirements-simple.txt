@@ -1,0 +1,26 @@
+# Essential AI Virtual Coding Platform Backend Requirements
+
+# Core FastAPI dependencies
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+
+# WebSocket support
+websockets
+
+# CORS support
+starlette
+
+# Environment management
+python-dotenv
+
+# File handling
+aiofiles
+
+# JSON handling (optional)
+# orjson
+
+# For development
+# pytest
+# httpx

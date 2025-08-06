@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Virtual Coding Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Monaco Editor CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.34.1/min/vs/loader.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>AI Virtual Coding Platform</h1>
+      <div class="controls">
+        <select id="language" class="language-selector">
+          <option value="python">Python</option>
+          <option value="javascript">JavaScript</option>
+          <option value="java">Java</option>
+          <option value="cpp">C++</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+        </select>
+        <button id="reload-api-key" class="btn btn-warning">
+          <span class="btn-icon">🔄</span>
+          Reload API Key
+        </button>
+        <button id="run-btn" class="btn btn-primary">
+          <span class="btn-icon">▶</span>
+          Run Code
+        </button>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <div class="editor-panel">
+        <div class="panel-header">
+          <h3>Code Editor</h3>
+          <div class="editor-actions">
+            <button id="clear-editor" class="btn btn-secondary">Clear</button>
+            <button id="format-code" class="btn btn-secondary">Format</button>
+          </div>
+        </div>
+        <div id="editor" class="editor-container"></div>
+        <div class="output-section">
+          <div class="output-header">
+            <h4>Output</h4>
+            <button id="clear-output" class="btn btn-small">Clear</button>
+          </div>
+          <pre id="output" class="output-container"></pre>
+        </div>
+      </div>
+      
+      <div class="chat-panel">
+        <div class="panel-header">
+          <h3>AI Assistant</h3>
+          <div class="chat-actions">
+            <button id="clear-chat" class="btn btn-secondary">Clear Chat</button>
+          </div>
+        </div>
+        <div id="chat" class="chat-container"></div>
+        <div class="chat-input-section">
+          <div class="input-group">
+            <input type="text" id="chat-input" placeholder="Ask AI anything about your code..." />
+            <button id="chat-send" class="btn btn-primary">Send</button>
+          </div>
+          <div class="ai-actions">
+            <button id="auto-fill" class="btn btn-ai">
+              <span class="btn-icon">🤖</span>
+              Auto-Fill Code
+            </button>
+            <button id="explain-code" class="btn btn-ai">
+              <span class="btn-icon">💡</span>
+              Explain Code
+            </button>
+            <button id="debug-code" class="btn btn-ai">
+              <span class="btn-icon">🐛</span>
+              Debug Code
+            </button>
+            <button id="optimize-code" class="btn btn-ai">
+              <span class="btn-icon">⚡</span>
+              Optimize
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="status-bar">
+      <span id="status">Ready</span>
+      <span id="cursor-position">Line 1, Column 1</span>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
